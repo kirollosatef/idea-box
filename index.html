@@ -1,27 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>List Weeks</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>CSS Cards</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <div class="container">
-      <h1>List Weeks</h1>
-      <div class="form-group">
-        <label for="start-date">Start Date:</label>
-        <input type="date" id="start-date" />
-      </div>
+    <div class="card-category-2">
+      <h2 class="category-name">Ideas</h2>
+      <br /><br />
+      <ul>
+        <li>
+          <div class="img-card iCard-style3">
+            <div class="card-content">
+              <div class="card-image">
+                <span class="card-title">Weeks Lister</span>
+                <img src="./weeksLister/weeksLister.png" />
+              </div>
 
-      <div class="form-group">
-        <label for="end-date">End Date:</label>
-        <input type="date" id="end-date" />
-      </div>
+              <div class="card-text">
+                <p>
+                  This is a simple web app that lists the weeks between two
+                  dates.
+                </p>
+              </div>
+            </div>
 
-      <button onclick="listWeeks()">List Weeks</button>
-
-      <div id="output"></div>
+            <div class="card-link">
+              <a href="./weeksLister/index.html" title="Read Full">
+                <span>Go To Link</span>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>
