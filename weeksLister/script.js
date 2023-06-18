@@ -1,7 +1,8 @@
+document.getElementById("start-date").valueAsDate = new Date();
 function listWeeks() {
   var startDate = new Date(document.getElementById("start-date").value);
   var endDate = new Date(document.getElementById("end-date").value);
-
+  var days = (endDate - startDate) / (1000 * 60 * 60 * 24);
   var weeks = [];
 
   var weekStart = new Date(startDate);
@@ -17,7 +18,9 @@ function listWeeks() {
 
   var output = document.getElementById("output");
   output.innerHTML =
-    "<strong>Total weeks: " + weeks.length + "</strong><br><br>";
+    "<strong>Total weeks: " + weeks.length + "</strong>  |||||  ";
+  output.innerHTML += "<strong>Total days: " + days + "</strong>  |||||  ";
+  output.innerHTML += "<strong>Total Hours: " + days * 14 + "</strong><br><br>";
 
   weeks.forEach(function (week, index) {
     output.innerHTML += index + 1 + "- " + week + "<br>";
