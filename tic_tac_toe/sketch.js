@@ -19,6 +19,12 @@ function setup() {
   }
 }
 
+// add score
+// add restart button
+// add AI
+// add back button
+// add sound effects
+
 function nextTurn() {
   let index = floor(random(available.length));
   let spot = available.splice(index, 1)[0];
@@ -26,7 +32,8 @@ function nextTurn() {
   let j = spot[1];
   console.log(i, j);
   board[i][j] = currentPlayer;
-  currentPlayer = random(players);
+  currentPlayer =
+    players[(players.indexOf(currentPlayer) + 1) % players.length];
 }
 
 function mousePressed() {
